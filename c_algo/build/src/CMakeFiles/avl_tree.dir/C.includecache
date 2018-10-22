@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/avl_tree.h
+
+../include/common.h
+errno.h
+-
+
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/avl_tree.c
+stdio.h
+-
+common.h
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/common.h
+avl_tree.h
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/avl_tree.h
+

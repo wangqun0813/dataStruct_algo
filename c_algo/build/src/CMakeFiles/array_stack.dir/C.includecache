@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/array_stack.h
+
+../include/common.h
+errno.h
+-
+
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/array_stack.c
+stdio.h
+-
+array_stack.h
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/array_stack.h
+common.h
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/common.h
+

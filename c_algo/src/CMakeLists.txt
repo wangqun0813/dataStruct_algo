@@ -30,5 +30,11 @@ set_target_properties(array_stack_static PROPERTIES OUTPUT_NAME "array_stack")
 set_target_properties(array_stack PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 set_target_properties(array_stack_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 
+set(SOURCE_FILES array_queue.c)
+add_library(array_queue SHARED ${SOURCE_FILES})
+add_library(array_queue_static STATIC ${SOURCE_FILES})
+set_target_properties(array_queue_static PROPERTIES OUTPUT_NAME "array_queue")
+set_target_properties(array_queue PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+set_target_properties(array_queue_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../lib)

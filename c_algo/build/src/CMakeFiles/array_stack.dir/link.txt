@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libarray_stack.so -o ../../lib/libarray_stack.so CMakeFiles/array_stack.dir/array_stack.c.o 

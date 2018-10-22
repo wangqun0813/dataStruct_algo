@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/array_queue.h
+
+/work_space/repository/mygithub/dataStruct_algo/c_algo/test/array_queue_test.c
+stdio.h
+-
+array_queue.h
+/work_space/repository/mygithub/dataStruct_algo/c_algo/test/array_queue.h
+

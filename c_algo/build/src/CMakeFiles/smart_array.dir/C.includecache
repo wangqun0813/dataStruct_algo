@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/common.h
+errno.h
+-
+
+../include/smart_array.h
+
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/smart_array.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+common.h
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/common.h
+smart_array.h
+/work_space/repository/mygithub/dataStruct_algo/c_algo/src/smart_array.h
+

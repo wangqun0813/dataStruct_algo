@@ -37,4 +37,11 @@ set_target_properties(array_queue_static PROPERTIES OUTPUT_NAME "array_queue")
 set_target_properties(array_queue PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 set_target_properties(array_queue_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 
+set(SOURCE_FILES base_sort.c)
+add_library(base_sort SHARED ${SOURCE_FILES})
+add_library(base_sort_static STATIC ${SOURCE_FILES})
+set_target_properties(base_sort_static PROPERTIES OUTPUT_NAME "base_sort")
+set_target_properties(base_sort PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+set_target_properties(base_sort_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../lib)

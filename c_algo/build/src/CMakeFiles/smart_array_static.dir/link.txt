@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/libsmart_array.a  CMakeFiles/smart_array_static.dir/smart_array.c.o
-/usr/bin/ranlib ../../lib/libsmart_array.a

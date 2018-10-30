@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libarray_queue.so -o ../../lib/libarray_queue.so CMakeFiles/array_queue.dir/array_queue.c.o 

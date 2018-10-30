@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/libarray_stack.a  CMakeFiles/array_stack_static.dir/array_stack.c.o
-/usr/bin/ranlib ../../lib/libarray_stack.a

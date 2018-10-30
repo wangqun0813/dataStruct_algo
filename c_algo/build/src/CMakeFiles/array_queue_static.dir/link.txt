@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/libarray_queue.a  CMakeFiles/array_queue_static.dir/array_queue.c.o
-/usr/bin/ranlib ../../lib/libarray_queue.a

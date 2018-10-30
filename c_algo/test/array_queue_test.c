@@ -5,7 +5,8 @@
 #include <stdio.h>
 #include "array_queue.h"
 
-int main() {
+int main()
+{
     array_queue_s *queue = init_array_queue();
 
     for (int i = 0; i < 18; i++) {

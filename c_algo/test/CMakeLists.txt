@@ -2,7 +2,7 @@ project(c_algo C)
 
 
 link_directories(${PROJECT_SOURCE_DIR}/lib)
-link_libraries(smart_array list avl_tree array_stack array_queue)
+link_libraries(smart_array list avl_tree array_stack array_queue base_sort)
 
 set(SOURCE_FILES smart_array_test.c)
 add_executable(smart_array_test ${SOURCE_FILES})
@@ -18,6 +18,12 @@ add_executable(array_statck_test ${SOURCE_FILES})
 
 set(SOURCE_FILES array_queue_test.c)
 add_executable(array_queue_test ${SOURCE_FILES})
+
+set(SOURCE_FILES dgFunc_test.c)
+add_executable(dgFunc_test ${SOURCE_FILES})
+
+set(SOURCE_FILES base_sort_test.c)
+add_executable(base_sort_test ${SOURCE_FILES})
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../bin)
 

@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libsmart_array.so -o ../../lib/libsmart_array.so CMakeFiles/smart_array.dir/smart_array.c.o 

@@ -13,6 +13,9 @@ void print_array_data(int data[], int size)
 
 int main()
 {
+	struct timeval t1, t2;
+	int data[1000000];
+	unsigned long i;
     int a[] = {4,5,6,1,2,3};
     int b[] = {4,5,6,1,2,3};
     int c[] = {4,5,6,1,2,3};
@@ -23,5 +26,37 @@ int main()
     print_array_data(b, 6);
     bubble_sort(c, 6);
     print_array_data(c, 6);
+	
+	srand(time(0));
+	for ( i=0; i<ARRAY_SIZE(data, int); i++){
+		data[i] = rand()/ARRAY_SIZE(data, int);
+	}
+	//print_array(data, ARRAY_SIZE(data, int));
+	gettimeofday(&t1, NULL);
+	printf("secs:%ld, usecs:%ld\n", t1.tv_sec,t1.tv_usec);
+	merge_sort(data, ARRAY_SIZE(data, int));
+	gettimeofday(&t2, NULL);
+	printf("secs:%ld, usecs:%ld\n", t2.tv_sec,t2.tv_usec);
+	
+	//print_array(data, ARRAY_SIZE(data, int));
+	printf("time: %ld us\n", (t2.tv_sec-t1.tv_sec)*1000+t2.tv_usec-t1.tv_usec);
+
+	srand(time(0));
+	for ( i=0; i<ARRAY_SIZE(data, int); i++){
+		data[i] = rand()%100;
+	}
+//	printf("sort before:\n");
+//	print_array(data, ARRAY_SIZE(data, int));
+	gettimeofday(&t1, NULL);
+	printf("secs:%ld, usecs:%ld\n", t1.tv_sec,t1.tv_usec);
+	counter_sort(data, ARRAY_SIZE(data, int));
+	gettimeofday(&t2, NULL);
+	printf("secs:%ld, usecs:%ld\n", t2.tv_sec,t2.tv_usec);
+	printf("time: %ld us\n", (t2.tv_sec-t1.tv_sec)*1000+t2.tv_usec-t1.tv_usec);
+//	printf("sort after:\n");
+//	print_array(data, ARRAY_SIZE(data, int));
+	
+	
+	
     return 0;
 }

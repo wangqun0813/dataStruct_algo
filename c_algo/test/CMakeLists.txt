@@ -25,5 +25,8 @@ add_executable(dgFunc_test ${SOURCE_FILES})
 set(SOURCE_FILES base_sort_test.c)
 add_executable(base_sort_test ${SOURCE_FILES})
 
+set(SOURCE_FILES binary_search_test.c)
+add_executable(binary_search_test ${SOURCE_FILES})
+
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../bin)
 

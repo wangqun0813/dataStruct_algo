@@ -61,3 +61,38 @@ void select_sort(int data[], int size)
         data[i] = tmp;
     }
 }
+
+//快速排序
+void fast_sort(int data[], int size)
+{
+    int i, j, tmp;
+
+    if (size <=1){
+        return;
+    }
+    i = 0;
+    j = size-2;
+    while(1){
+        if (i>=j){
+            break;
+        }
+        if(data[i]<=data[size-1])
+            ++i;
+        if (data[j]>=data[size-1])
+            --j;
+        if (data[i]>data[size-1] && data[j]<data[size-1]){
+            tmp = data[i];
+            data[i] = data[j];
+            data[j] = tmp;
+            ++i;
+            --j;
+        }
+    }
+    if (data[i] > data[size-1]){
+        tmp = data[i];
+        data[i] = data[size-1];
+        data[size-1] = tmp;
+    }
+    fast_sort(data, i+1); //必须使得中间值继续参与排序
+    fast_sort(data+i+1, size-i-1);
+}

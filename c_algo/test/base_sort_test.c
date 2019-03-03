@@ -16,12 +16,19 @@ int main()
     int a[] = {4,5,6,1,2,3};
     int b[] = {4,5,6,1,2,3};
     int c[] = {4,5,6,1,2,3};
+    int d[] = {5,5,6,1,9,3};
 
     select_sort(a, 6);
+    printf("select sort:\n");
     print_array_data(a, 6);
     insert_sort(b, 6);
+    printf("insert sort:\n");
     print_array_data(b, 6);
     bubble_sort(c, 6);
+    printf("bubble sort:\n");
     print_array_data(c, 6);
+    fast_sort(d, 6);
+    printf("fast sort:\n");
+    print_array_data(d, 6);
     return 0;
 }

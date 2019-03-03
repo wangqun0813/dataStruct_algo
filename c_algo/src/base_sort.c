@@ -3,7 +3,11 @@
 //
 
 #include "base_sort.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/time.h>
+#include <time.h>
 
 //冒泡排序
 void bubble_sort(int data[], int size)
@@ -62,6 +66,7 @@ void select_sort(int data[], int size)
     }
 }
 
+
 //快速排序
 void fast_sort(int data[], int size)
 {
@@ -96,3 +101,65 @@ void fast_sort(int data[], int size)
     fast_sort(data, i+1); //必须使得中间值继续参与排序
     fast_sort(data+i+1, size-i-1);
 }
+
+//基数排序
+//一定范围内的数据排序，使用一个数组存储数据出现次数，通过便利该数组排序
+void counter_sort(int *data, int num)
+{
+	int C[100] = {0};
+	int i,j;
+
+	for (i=0; i<num; i++){
+		++C[data[i]];	
+	}
+	j = 0;
+	for (i=0; i<num; i++){
+		P_FLAG:
+		if (C[j] == 0){
+			++j;
+			goto P_FLAG;
+		}
+		else{
+			--C[j];
+			data[i] = j;
+		}
+	}
+	
+}
+
+//归并排序
+void merge(int *data1, int *data2, unsigned long num)
+{
+	unsigned long i, j, k;
+	int *tmp = (int *)calloc(num, sizeof(int));
+
+	for (k=0, i=0, j=0; k<num; k++){
+		if (data1[i] > data2[j]){
+			tmp[k] = data2[j++];
+		}
+		else{
+			tmp[k] = data1[i++];
+		}
+		if (i == num/2){
+			memcpy(&tmp[k+1], data2+j, (num-num/2-j)*sizeof(int));
+			break;		
+		}
+		else if (j == num-num/2){
+			memcpy(&tmp[k+1], data1+i, (num/2-i)*sizeof(int));
+			break;		
+		}	
+	}
+	memcpy(data1, tmp, num*sizeof(int));
+	free(tmp);
+}
+//
+void merge_sort(int *data, unsigned long num)
+{
+	if (num == 1 || num == 0){
+		return;
+	}
+	merge_sort(data, num/2);
+	merge_sort(data+num/2, num-num/2);
+	merge(data, data+num/2, num);
+}
+

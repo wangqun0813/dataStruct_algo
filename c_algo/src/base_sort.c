@@ -13,10 +13,10 @@
 void bubble_sort(int data[], int size)
 {
     int i, j;
-    int tmp;
+    int tmp, flag;
 
     for (j=0; j<size; j++){
-        int flag = 0;
+        flag = 0;
         for (i=0; i<size-j-1; i++) {
             if (data[i] > data[i + 1]) {
                 tmp = data[i];
@@ -128,7 +128,7 @@ void counter_sort(int *data, int num)
 }
 
 //归并排序
-void merge(int *data1, int *data2, unsigned long num)
+static void merge(int *data1, int *data2, unsigned long num)
 {
 	unsigned long i, j, k;
 	int *tmp = (int *)calloc(num, sizeof(int));

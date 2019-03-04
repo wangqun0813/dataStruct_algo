@@ -10,7 +10,7 @@ array_stack_s *array_stack_init(void)
     array_stack_s *array_stack = malloc(sizeof(array_stack_s));
     _CHECK_PTR_(array_stack == NULL);
 
-    array_stack->size = 3;
+    array_stack->size = STACK_SIZE;
     array_stack->cur = 0;
     return array_stack;
 }

@@ -5,7 +5,7 @@
 #ifndef C_ALGO_ARRAY_STACK_H
 #define C_ALGO_ARRAY_STACK_H
 
-
+#define STACK_SIZE 3
 typedef void* arrayStackValueType;
 
 typedef struct array_stack_s{

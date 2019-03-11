@@ -43,10 +43,10 @@ void print_array_queue(array_queue_s *queue)
 
     i = queue->head;
     while(1){
-        if (i%(sizeof(queue->buffer)/sizeof(queueValue_t)) == queue->tail){
+        if (i%MAX_QUEUE_SIZE == queue->tail){
             break;
         }
-        printf("%d ", queue->buffer[i%(sizeof(queue->buffer)/sizeof(queueValue_t))]);
+        printf("%d ", (int)(queue->buffer[i%MAX_QUEUE_SIZE]));
         ++i;
     }
     printf("\n");

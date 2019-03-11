@@ -4,8 +4,8 @@
 
 #ifndef C_ALGO_COMMON_H
 #define C_ALGO_COMMON_H
-
 #include <errno.h>
+#include <string.h>
 
 #define ARRAY_SIZE(array, type) sizeof(array)/sizeof(type)
 

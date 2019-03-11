@@ -33,7 +33,7 @@ arrayStackValueType push_out_array_stack(array_stack_s *array_stack)
 {
     if (array_stack->cur == 0){
         printf("array stack is null\n");
-        return -1;
+        return (arrayStackValueType)-1;
     }
     arrayStackValueType v = array_stack->value[array_stack->cur];
     --array_stack->cur;
@@ -48,7 +48,7 @@ void print_array_stack(array_stack_s *array_stack)
     }
     printf("array_stack:\n");
     for (int i=array_stack->cur; i>0; i--){
-        printf("%d ", array_stack->value[i]);
+        printf("%d ", (arrayStackValueType)array_stack->value[i]);
     }
     printf("\n");
 }

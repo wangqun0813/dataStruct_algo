@@ -51,4 +51,12 @@ set_target_properties(binary_search_static PROPERTIES OUTPUT_NAME "binary_search
 set_target_properties(binary_search PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 set_target_properties(binary_search_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 
+set(SOURCE_FILES jump_list.c)
+add_library(jump_list SHARED ${SOURCE_FILES})
+add_library(jump_list_static STATIC ${SOURCE_FILES})
+set_target_properties(jump_list_static PROPERTIES OUTPUT_NAME "jump_list")
+set_target_properties(jump_list PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+set_target_properties(jump_list_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+
+
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../lib)

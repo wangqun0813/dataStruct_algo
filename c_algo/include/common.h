@@ -7,6 +7,9 @@
 
 #include <errno.h>
 
+#define ARRAY_SIZE(array, type) sizeof(array)/sizeof(type)
+
+
 typedef unsigned int   uint32_t;
 typedef unsigned short uint16_t;
 typedef unsigned char  uint8_t;
@@ -34,5 +37,15 @@ do{                     \
         return NULL;    \
     }                   \
 }while(0);
+
+#define _CALL_(function)	\
+do{							\
+	int ret = function;		\
+	if (ret < 0){			\
+		printf("%s return -1.\n",#function);\
+		return -1;			\
+	}						\
+}while(0)
+
 
 #endif //C_ALGO_COMMON_H

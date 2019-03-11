@@ -2,7 +2,7 @@
 
 
 //二分查找
-static int binary_search(int *data, int num, int res)
+int binary_search(int *data, int num, int res)
 {
 	int mid;
 
@@ -46,12 +46,3 @@ int binary_search2(int *data, int num, int res)
 	return -1;
 }
 
-/*
-int main()
-{
-	int data[8] = {1,3,3,3,4,5,7,8};
-
-	binary_search2(data, ARRAY_SIZE(data, int), 4);
-	return 0;
-}
-*/

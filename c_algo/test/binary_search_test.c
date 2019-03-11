@@ -1,13 +1,12 @@
+#include <stdio.h>
+#include "common.h"
 #include "binary_search.h"
-
 
 
 int main()
 {
-	void print_array_data(int data[], int size)
-{
-    for (int i=0; i<size; i++)
-        printf("%d ", data[i]);
-    printf("\n---------------------\n");
+	int data[8] = {1,3,3,3,4,5,7,8};
+
+	binary_search2(data, ARRAY_SIZE(data, int), 4);
 	return 0;
 }

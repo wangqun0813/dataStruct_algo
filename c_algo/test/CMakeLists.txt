@@ -2,7 +2,7 @@ project(c_algo C)
 
 
 link_directories(${PROJECT_SOURCE_DIR}/lib)
-link_libraries(smart_array list avl_tree array_stack array_queue base_sort)
+link_libraries(smart_array list avl_tree array_stack array_queue base_sort jump_list binary_search)
 
 set(SOURCE_FILES smart_array_test.c)
 add_executable(smart_array_test ${SOURCE_FILES})
@@ -27,6 +27,9 @@ add_executable(base_sort_test ${SOURCE_FILES})
 
 set(SOURCE_FILES binary_search_test.c)
 add_executable(binary_search_test ${SOURCE_FILES})
+
+set(SOURCE_FILES jump_list_test.c)
+add_executable(jump_list_test ${SOURCE_FILES})
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../bin)
 
